@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  img(src='https://i.imgur.com/wr8wu3B.gif')
+  br
+  br
+  h2 인기 많았던 심리테스트들을 모았다!
+  h4 넌 나고 난 너야♬ 서로를 알아보는 테스트들의 향연!
+  br
+  h5
+    ul
+      - for (let index = 0; index < dataList.length; index++) {
+      li
+        a.muted(href='#{dataList[index].url}' target='_blank') #{dataList[index].title}
+      - }
+      //li
+        //a.muted(href='https://lu42.co.kr/campaign/flowergarden/mbti' target='_blank') 프리미엄 셀렉트샵 당신은 어떤 꽃인가요? MBTI LU42
+      li
+        a.muted(href='https://spti.snackpot.kr/' target='_blank') 스낵으로 보는 내 성격, SPTI
+      li
+        a.muted(href='https://dodamind.kr/test-ds/' target='_blank') 나와 어울리는 동숲 주민은?
+      li
+        a.muted(href='https://lovedoongdoong.com/' target='_blank') 나와 찰떡궁합인 반려동물은?
+      li
+        a.muted(href='https://myanimal.kokkiri.kr/' target='_blank') 무의식 속 숨은 동물 찾기 심리테스트
+      li
+        a.muted(href='https://mypower.spacecloud.kr/' target='_blank') 남들이 보는 나의 핵심능력이 궁금하다면?
+      li
+        a.muted(href='https://www.zutopia-test.com/' target='_blank') 나의 주사 유형 테스트
+      li
+        a.muted(href='https://www.zzinhakbun.com/' target='_blank') 찐학번테스트
+      li
+        a.muted(href='https://banggooso.com/intro.html?idx=13' target='_blank') 첫인상 테스트
+      li
+        a.muted(href='https://banggooso.com/intro.html?idx=18' target='_blank') 나는 어떤 유형의 부자일까?
+      li
+        a.muted(href='https://poomang.com/amasia?c=1' target='_blank') 연애력! 테스트
+      li
+        a.muted(href='https://nelna.shop/nelna-mbti' target='_blank') 수정구슬아, 내 전생을 보여줘!
+      li
+        a.muted(href='https://www.billboardtest.co.kr/' target='_blank') 나와 닮은 빌보드 스타는?
+      li
+        a.muted(href='https://poomang.com/chunmyung' target='_blank') 연애고자 테스트
+      li
+        a.muted(href='https://www.jaju-lifestyle.com/' target='_blank') 일상재질 테스트
+      li
+        a.muted(href='http://bodyfantasies.kr/web/event_booke/index.html' target='_blank') 연애 부캐 테스트
+      li
+        a.muted(href='https://banggooso.com/intro.html?idx=23' target='_blank') 돈BTI 테스트
+      li
+        a.muted(href='https://poomang.com/soul' target='_blank') 소울 테스트
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+      li
+        a.muted(href='' target='_blank')
+
+
+
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous')

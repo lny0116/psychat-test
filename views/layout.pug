@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous')
+    nav.navbar.navbar-light.bg-light
+      .container-fluid
+        a.navbar-brand(href='/')
+          img.d-inline-block.align-top(src='https://i0.wp.com/visaocidade.com.br/wp-content/uploads/2017/04/%E6%9C%89%E6%B2%92%E6%9C%89%E5%93%AA%E8%A3%A1%E6%94%B9%E9%8C%AF%EF%BC%9F.png?resize=482%2C445' alt='' width='30' height='24')
+          |       #{title}
+
+  body
+    block content
