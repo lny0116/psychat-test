@@ -3,15 +3,20 @@ var router = express.Router();
 
 // Home Keyboard API
 router.get('/', function(req, res, next) {
-  res.send({
+  var data = ({
     "type": "buttons",
     "buttons": [
-      "선택 1",
-      "선택 2",
-      "선택 3"
+      "성격",
+      "연애",
+      "직장",
+      "연예인",
+      "환생",
+      "여행"
     ]
   });
+  res.json(data);
 });
+
 
 
 
