@@ -1,4 +1,4 @@
-const dataList = [
+const DATA_LIST = [
     {
         title: "16Personalities MBTI 검사 | 전문기관",
         url: "https://www.16personalities.com/ko",
@@ -656,14 +656,42 @@ const dataList = [
     },
 ];
 
-function recommend(type) {
-    const result = [];
+const TYPE_MAP = new Map();
 
-    for (let data of dataList) {
-        if (data.type === type) {
-            result.push(data);
-        }
+for (let data of DATA_LIST) {
+    const typeValue = TYPE_MAP.get(data.type);
+
+    if (typeValue === undefined) {
+        TYPE_MAP.set(data.type, [ data ]);
+        continue;
     }
 
+    typeValue.push(data);
+}
+
+const EMPTY_LIST = [];
+
+function selectAll() {
+    return DATA_LIST;
+}
+
+function selectListByType(type) {
+    const result = TYPE_MAP.get(type);
+    if (result === undefined) {
+        return EMPTY_LIST;
+    }
     return result;
+}
+
+/**
+ * @returns {boolean}
+ */
+function validType(type) {
+    return TYPE_MAP.has(type);
+}
+
+module.exports = {
+    selectAll: selectAll,
+    selectListByType: selectListByType,
+    validType: validType
 }
