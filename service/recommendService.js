@@ -23,7 +23,12 @@ function validType(type) {
     return psyDao.validType(type);
 }
 
+function findAllTypeList() {
+    return psyDao.selectAllTypeList();
+}
+
 module.exports = {
     findAll: findAll,
-    findByType: findByType
+    findByType: findByType,
+    findAllTypeList: findAllTypeList
 }

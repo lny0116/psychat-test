@@ -670,6 +670,7 @@ for (let data of DATA_LIST) {
 }
 
 const EMPTY_LIST = [];
+const TYPE_LIST = Array.from(TYPE_MAP.keys());
 
 function selectAll() {
     return DATA_LIST;
@@ -690,8 +691,13 @@ function validType(type) {
     return TYPE_MAP.has(type);
 }
 
+function selectAllTypeList() {
+    return TYPE_LIST;
+}
+
 module.exports = {
     selectAll: selectAll,
     selectListByType: selectListByType,
-    validType: validType
+    validType: validType,
+    selectAllTypeList: selectAllTypeList
 }

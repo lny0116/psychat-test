@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/:type', function(req, res, next) {
+router.get('/type/:type', function(req, res, next) {
   const type = req.params.type;
 
   res.render('index', {
